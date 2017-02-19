@@ -25,9 +25,8 @@ public class DisorderSystem : MonoBehaviour {
     [SerializeField]
     private Object rightPersonBlankFace;
 
-    //Needed in case we have other clips on the ear.
-    //[SerializeField]
-    //private AudioClip tinnitusClip;
+    [SerializeField]
+    private GameObject tinnitusSource;
 
 
     private Object correctLeftFace;
@@ -121,7 +120,7 @@ public class DisorderSystem : MonoBehaviour {
 
     public void Tinnitus()
     {
-        AudioSource source = earObject.GetComponent<AudioSource>();
+        AudioSource source = tinnitusSource.GetComponent<AudioSource>();
 
         activeAudioDisorders.Add(source);
         source.enabled = true;

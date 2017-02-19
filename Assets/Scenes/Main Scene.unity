@@ -431,11 +431,11 @@ Prefab:
     - target: {fileID: 3380982, guid: 4d293c8e162f3874b982baadd71153d2, type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 505015487}
+      objectReference: {fileID: 1952454892}
     - target: {fileID: 2348914, guid: 4d293c8e162f3874b982baadd71153d2, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 488477150}
+      objectReference: {fileID: 1875233758}
     - target: {fileID: 482514, guid: 4d293c8e162f3874b982baadd71153d2, type: 2}
       propertyPath: m_RootOrder
       value: 1
@@ -1783,7 +1783,6 @@ GameObject:
   - component: {fileID: 368562385}
   - component: {fileID: 368562389}
   - component: {fileID: 368562388}
-  - component: {fileID: 368562387}
   - component: {fileID: 368562386}
   m_Layer: 5
   m_Name: Selection (2)
@@ -1824,41 +1823,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.73, y: 0.18, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &368562387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 368562384}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdf6b6d3743f210489f4b8a0216d20dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  disorderType: 0
-  isReturnButton: 0
-  selectionMenu: {fileID: 357518727}
-  disorderMenu: {fileID: 618497912}
-  disorderTitle: {fileID: 1762667739}
-  disorderText: {fileID: 218172453}
-  disorderName: 
-  disorderDescription: 
-  eventOnSelect:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1053496820}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
 --- !u!114 &368562388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1960,7 +1924,8 @@ MonoBehaviour:
   disorderTitle: {fileID: 1931328196}
   disorderText: {fileID: 677567076}
   disorderName: Partial Blindness
-  disorderDescription: Partial blindness is when you're partially blind.
+  disorderDescription: 'Only 15% of legally blind people have no vision at all. One
+    eye may be enough to get by while the other is worse than the legal limit: 20/200.'
   eventOnSelect:
     m_PersistentCalls:
       m_Calls:
@@ -2020,7 +1985,6 @@ GameObject:
   - component: {fileID: 402602522}
   - component: {fileID: 402602526}
   - component: {fileID: 402602525}
-  - component: {fileID: 402602524}
   - component: {fileID: 402602523}
   m_Layer: 5
   m_Name: Selection (2)
@@ -2061,41 +2025,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.73, y: 0.18, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &402602524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 402602521}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdf6b6d3743f210489f4b8a0216d20dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  disorderType: 0
-  isReturnButton: 0
-  selectionMenu: {fileID: 1334891667}
-  disorderMenu: {fileID: 130440519}
-  disorderTitle: {fileID: 1304283666}
-  disorderText: {fileID: 2050742030}
-  disorderName: 
-  disorderDescription: 
-  eventOnSelect:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1053496820}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
 --- !u!114 &402602525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2381,35 +2310,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 452120929}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!21 &488477150
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - first:
-        name: PixelSnap
-      second: 0
-    m_Colors:
-    - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &489776525
 Prefab:
   m_ObjectHideFlags: 0
@@ -2666,134 +2566,6 @@ Transform:
   m_Father: {fileID: 284345235}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &505015487
-Mesh:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  serializedVersion: 8
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 24
-    topology: 0
-    firstVertex: 0
-    vertexCount: 8
-    localAABB:
-      m_Center: {x: 0, y: 0.01, z: 0}
-      m_Extent: {x: 1.65, y: 0, z: 1.275}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexBuffer: 000004000100010004000500010005000200020005000600020006000300030006000700030007000000000007000400
-  m_Skin: []
-  m_VertexData:
-    m_CurrentChannels: 13
-    m_VertexCount: 8
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 4
-    - stream: 0
-      offset: 28
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 288
-    _typelessdata: 0000c03f0ad7233c0000903f000000000000803f0000803f0000803f00000000000000000000c03f0ad7233c000090bf000000000000803f0000803f0000803f0000803f000000000000c0bf0ad7233c000090bf000000000000803f0000803f0000803f00000000000000000000c0bf0ad7233c0000903f000000000000803f0000803f0000803f0000803f000000003333d33f0ad7233c3333a33f000000000000803f0000803f00000000000000000000803f3333d33f0ad7233c3333a3bf000000000000803f0000803f000000000000803f0000803f3333d3bf0ad7233c3333a3bf000000000000803f0000803f00000000000000000000803f3333d3bf0ad7233c3333a33f000000000000803f0000803f000000000000803f0000803f
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: 0, y: 0.01, z: 0}
-    m_Extent: {x: 1.65, y: 0, z: 1.275}
-  m_MeshUsageFlags: 0
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  m_MeshOptimized: 0
 --- !u!1 &511468375
 GameObject:
   m_ObjectHideFlags: 0
@@ -2861,7 +2633,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Coming Soon!
+  m_Text: Vertigo
 --- !u!222 &511468378
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3381,7 +3153,9 @@ MonoBehaviour:
   disorderTitle: {fileID: 1762667739}
   disorderText: {fileID: 218172453}
   disorderName: Panic Disorder
-  disorderDescription: 
+  disorderDescription: It is diagnosed in people who experience spontaneous panic
+    attacks and develop a constant fear of a recurring attack which can affect one's
+    daily lifestyle. It affects about 2.4 million adult Americans.
   eventOnSelect:
     m_PersistentCalls:
       m_Calls:
@@ -3475,7 +3249,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9aac9a4a97979e24d9ee99dcd6ea1ddb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3726,7 +3500,6 @@ GameObject:
   - component: {fileID: 733511634}
   - component: {fileID: 733511638}
   - component: {fileID: 733511637}
-  - component: {fileID: 733511636}
   - component: {fileID: 733511635}
   m_Layer: 5
   m_Name: Selection (4)
@@ -3767,41 +3540,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.73, y: 0.18, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &733511636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 733511633}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdf6b6d3743f210489f4b8a0216d20dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  disorderType: 0
-  isReturnButton: 0
-  selectionMenu: {fileID: 357518727}
-  disorderMenu: {fileID: 618497912}
-  disorderTitle: {fileID: 1762667739}
-  disorderText: {fileID: 218172453}
-  disorderName: 
-  disorderDescription: 
-  eventOnSelect:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1053496820}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
 --- !u!114 &733511637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3884,8 +3622,8 @@ MonoBehaviour:
   disorderTitle: {fileID: 1931328196}
   disorderText: {fileID: 677567076}
   disorderName: Achromatopsia
-  disorderDescription: A rare form of complete colorblindness, where those affected
-    can only see in black, white, and gray.
+  disorderDescription: A rare (<.001% of population) form of complete colorblindness,
+    where those affected can only see in black, white, and gray.
   eventOnSelect:
     m_PersistentCalls:
       m_Calls:
@@ -4180,7 +3918,9 @@ MonoBehaviour:
   disorderTitle: {fileID: 1304283666}
   disorderText: {fileID: 2050742030}
   disorderName: Deafness
-  disorderDescription: A condition where it's impossible to hear properly.
+  disorderDescription: A condition where it's impossible to hear properly. Because
+    of the way the inner ear is structured, high pitched sounds are commonly lost
+    first.
   eventOnSelect:
     m_PersistentCalls:
       m_Calls:
@@ -4230,6 +3970,70 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 783568001}
+--- !u!1 &800123446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 800123448}
+  - component: {fileID: 800123447}
+  m_Layer: 0
+  m_Name: Rainbow_PNG_Clipart_Picture
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &800123447
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 800123446}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 04be7193b106e404887bad6a25427d17, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!4 &800123448
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 800123446}
+  m_LocalRotation: {x: -0, y: -0.7071066, z: -0, w: 0.707107}
+  m_LocalPosition: {x: -5.693, y: 1.701, z: 3.075}
+  m_LocalScale: {x: 0.11435952, y: 0.11435952, z: 0.11435952}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
 --- !u!1 &820018575
 GameObject:
   m_ObjectHideFlags: 0
@@ -4242,6 +4046,7 @@ GameObject:
   - component: {fileID: 820018579}
   - component: {fileID: 820018578}
   - component: {fileID: 820018581}
+  - component: {fileID: 820018582}
   - component: {fileID: 820018577}
   m_Layer: 0
   m_Name: Camera L
@@ -4364,6 +4169,19 @@ MonoBehaviour:
   separableBlurShader: {fileID: 4800000, guid: e97c14fbb5ea04c3a902cc533d7fc5d1, type: 3}
   chromAberrationShader: {fileID: 4800000, guid: 2b4f29398d9484ccfa9fd220449f5eee,
     type: 3}
+--- !u!114 &820018582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 820018575}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75ef3d3a90250f940860f4733f93ce6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 0
+  showDifference: 0
 --- !u!1 &832095260
 GameObject:
   m_ObjectHideFlags: 0
@@ -4701,7 +4519,6 @@ GameObject:
   - component: {fileID: 937795787}
   - component: {fileID: 937795791}
   - component: {fileID: 937795790}
-  - component: {fileID: 937795789}
   - component: {fileID: 937795788}
   m_Layer: 5
   m_Name: Selection (3)
@@ -4741,41 +4558,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.73, y: 0.18, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &937795789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 937795786}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdf6b6d3743f210489f4b8a0216d20dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  disorderType: 0
-  isReturnButton: 0
-  selectionMenu: {fileID: 357518727}
-  disorderMenu: {fileID: 618497912}
-  disorderTitle: {fileID: 1762667739}
-  disorderText: {fileID: 218172453}
-  disorderName: 
-  disorderDescription: 
-  eventOnSelect:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1053496820}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
 --- !u!114 &937795790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5054,7 +4836,6 @@ GameObject:
   - component: {fileID: 1023682017}
   - component: {fileID: 1023682021}
   - component: {fileID: 1023682020}
-  - component: {fileID: 1023682019}
   - component: {fileID: 1023682018}
   m_Layer: 5
   m_Name: Selection (3)
@@ -5094,41 +4875,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.73, y: 0.18, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1023682019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1023682016}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdf6b6d3743f210489f4b8a0216d20dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  disorderType: 0
-  isReturnButton: 0
-  selectionMenu: {fileID: 1334891667}
-  disorderMenu: {fileID: 130440519}
-  disorderTitle: {fileID: 1304283666}
-  disorderText: {fileID: 2050742030}
-  disorderName: 
-  disorderDescription: 
-  eventOnSelect:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1053496820}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
 --- !u!114 &1023682020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5172,7 +4918,6 @@ GameObject:
   - component: {fileID: 1030628166}
   - component: {fileID: 1030628170}
   - component: {fileID: 1030628169}
-  - component: {fileID: 1030628168}
   - component: {fileID: 1030628167}
   m_Layer: 5
   m_Name: Selection (1)
@@ -5212,41 +4957,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.73, y: 0.18, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1030628168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1030628165}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdf6b6d3743f210489f4b8a0216d20dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  disorderType: 0
-  isReturnButton: 0
-  selectionMenu: {fileID: 1334891667}
-  disorderMenu: {fileID: 130440519}
-  disorderTitle: {fileID: 1304283666}
-  disorderText: {fileID: 2050742030}
-  disorderName: 
-  disorderDescription: 
-  eventOnSelect:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1053496820}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
 --- !u!114 &1030628169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5421,6 +5131,7 @@ GameObject:
   - component: {fileID: 1058933271}
   - component: {fileID: 1058933270}
   - component: {fileID: 1058933273}
+  - component: {fileID: 1058933274}
   - component: {fileID: 1058933269}
   m_Layer: 0
   m_Name: Camera R
@@ -5543,6 +5254,19 @@ MonoBehaviour:
   separableBlurShader: {fileID: 4800000, guid: e97c14fbb5ea04c3a902cc533d7fc5d1, type: 3}
   chromAberrationShader: {fileID: 4800000, guid: 2b4f29398d9484ccfa9fd220449f5eee,
     type: 3}
+--- !u!114 &1058933274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1058933267}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75ef3d3a90250f940860f4733f93ce6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 0
+  showDifference: 0
 --- !u!1 &1063541920
 GameObject:
   m_ObjectHideFlags: 0
@@ -5613,16 +5337,16 @@ MonoBehaviour:
   disorderText: {fileID: 677567076}
   disorderName: Deuteranopia
   disorderDescription: The person cannot distinguish between red and green. The green
-    cone is malfunctioning.
+    cone is malfunctioning. 0.56% of population affected
   eventOnSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1053496820}
-        m_MethodName: 
+      - m_Target: {fileID: 1053496821}
+        m_MethodName: Deuteranopia
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6211,8 +5935,8 @@ MonoBehaviour:
   disorderTitle: {fileID: 1931328196}
   disorderText: {fileID: 677567076}
   disorderName: Tritanopia
-  disorderDescription: The person cannot distinguish between blue and yellow. The
-    blue cone is malfunctioning.
+  disorderDescription: "The person cannot distinguish between blue and yellow. The
+    blue cone is malfunctioning. \t0.016% of population affected"
   eventOnSelect:
     m_PersistentCalls:
       m_Calls:
@@ -6405,7 +6129,8 @@ MonoBehaviour:
   disorderText: {fileID: 2050742030}
   disorderName: Tinnitus
   disorderDescription: People suffering from this condition continuously hear a high
-    pitched whine.
+    pitched whine. The sound can cause depression or anxiety and can be treated through
+    talk therapy. It is common, affecting about 10-15% of people.
   eventOnSelect:
     m_PersistentCalls:
       m_Calls:
@@ -6708,7 +6433,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Point and select a disorder to view it's effects.
+  m_Text: Point and select a disorder to view its effects.
 --- !u!222 &1312503139
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8444,7 +8169,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Coming Soon!
+  m_Text: Spatial Hearing Loss
 --- !u!222 &1629151583
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8461,7 +8186,6 @@ GameObject:
   - component: {fileID: 1629887570}
   - component: {fileID: 1629887574}
   - component: {fileID: 1629887573}
-  - component: {fileID: 1629887572}
   - component: {fileID: 1629887571}
   m_Layer: 5
   m_Name: Selection (1)
@@ -8501,41 +8225,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.73, y: 0.18, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1629887572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1629887569}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdf6b6d3743f210489f4b8a0216d20dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  disorderType: 0
-  isReturnButton: 0
-  selectionMenu: {fileID: 357518727}
-  disorderMenu: {fileID: 618497912}
-  disorderTitle: {fileID: 1762667739}
-  disorderText: {fileID: 218172453}
-  disorderName: 
-  disorderDescription: 
-  eventOnSelect:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1053496820}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
 --- !u!114 &1629887573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9097,7 +8786,7 @@ MonoBehaviour:
   disorderText: {fileID: 677567076}
   disorderName: Protanopia
   disorderDescription: The person cannot distinguish between red and green. The red
-    cone is malfunctioning.
+    cone is malfunctioning. 0.59% of population affected.
   eventOnSelect:
     m_PersistentCalls:
       m_Calls:
@@ -9415,7 +9104,6 @@ GameObject:
   - component: {fileID: 1800161474}
   - component: {fileID: 1800161478}
   - component: {fileID: 1800161477}
-  - component: {fileID: 1800161476}
   - component: {fileID: 1800161475}
   m_Layer: 5
   m_Name: Selection (4)
@@ -9456,41 +9144,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.73, y: 0.18, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1800161476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1800161473}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdf6b6d3743f210489f4b8a0216d20dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  disorderType: 0
-  isReturnButton: 0
-  selectionMenu: {fileID: 1334891667}
-  disorderMenu: {fileID: 130440519}
-  disorderTitle: {fileID: 1304283666}
-  disorderText: {fileID: 2050742030}
-  disorderName: 
-  disorderDescription: 
-  eventOnSelect:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1053496820}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
 --- !u!114 &1800161477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9621,7 +9274,7 @@ MonoBehaviour:
   disorderTitle: {fileID: 1931328196}
   disorderText: {fileID: 677567076}
   disorderName: Legal Blindness
-  disorderDescription: 
+  disorderDescription: The person has 20/200 vision.
   eventOnSelect:
     m_PersistentCalls:
       m_Calls:
@@ -9883,6 +9536,35 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!21 &1875233758
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: PixelSnap
+      second: 0
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1931328194
 GameObject:
   m_ObjectHideFlags: 0
@@ -9957,6 +9639,134 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1931328194}
+--- !u!43 &1952454892
+Mesh:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  serializedVersion: 8
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 24
+    topology: 0
+    firstVertex: 0
+    vertexCount: 8
+    localAABB:
+      m_Center: {x: 0, y: 0.01, z: 0}
+      m_Extent: {x: 1.65, y: 0, z: 1.275}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexBuffer: 000004000100010004000500010005000200020005000600020006000300030006000700030007000000000007000400
+  m_Skin: []
+  m_VertexData:
+    m_CurrentChannels: 13
+    m_VertexCount: 8
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 28
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 288
+    _typelessdata: 0000c03f0ad7233c0000903f000000000000803f0000803f0000803f00000000000000000000c03f0ad7233c000090bf000000000000803f0000803f0000803f0000803f000000000000c0bf0ad7233c000090bf000000000000803f0000803f0000803f00000000000000000000c0bf0ad7233c0000903f000000000000803f0000803f0000803f0000803f000000003333d33f0ad7233c3333a33f000000000000803f0000803f00000000000000000000803f3333d33f0ad7233c3333a3bf000000000000803f0000803f000000000000803f0000803f3333d3bf0ad7233c3333a3bf000000000000803f0000803f00000000000000000000803f3333d3bf0ad7233c3333a33f000000000000803f0000803f000000000000803f0000803f
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 0, y: 0.01, z: 0}
+    m_Extent: {x: 1.65, y: 0, z: 1.275}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshOptimized: 0
 --- !u!1 &1958983179
 GameObject:
   m_ObjectHideFlags: 0
@@ -10839,7 +10649,8 @@ MonoBehaviour:
   disorderName: Prosopagnosia
   disorderDescription: Prosopagnosia is a cognitive disorder of face perception where
     the ability to recognize familiar faces, including one's own face (self-recognition),
-    is impaired.
+    is impaired. Prosopagnosia obtained through brain damage is rare. However, developmental
+    prosopagnosia is more common with rates of 2 - 2.5%.
   eventOnSelect:
     m_PersistentCalls:
       m_Calls:

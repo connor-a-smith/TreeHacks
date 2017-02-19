@@ -108,6 +108,10 @@ public class DisorderSystem : MonoBehaviour {
         GetComponent<AudioSource>().Play();
         activeCognitiveDisorders.Add(GetComponent<AudioSource>());
 
+        cameraParent.GetComponent<Animator>().enabled = true;
+        cameraParent.GetComponent<Animator>().Play("PanicAnimation");
+        activeCognitiveDisorders.Add(GetComponent<Animator>());
+
     }
 
     public void Deafness()

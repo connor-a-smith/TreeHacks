@@ -63,6 +63,38 @@ public class DisorderSystem : MonoBehaviour {
         }
     }
 
+    public void Protanopia()
+    {
+        foreach (ColorBlindFilter filter in cameraParent.GetComponentsInChildren<ColorBlindFilter>())
+        {
+            activeVisualDisorders.Add(filter);
+            filter.mode = ColorBlindMode.Protanopia;
+            filter.enabled = true;
+        }
+    }
+
+    public void Deuteranopia()
+    {
+        foreach (ColorBlindFilter filter in cameraParent.GetComponentsInChildren<ColorBlindFilter>())
+        {
+            activeVisualDisorders.Add(filter);
+            filter.mode = ColorBlindMode.Deuteranopia;
+            filter.enabled = true;
+        }
+    }
+
+    public void Tritanopia()
+    {
+        foreach (ColorBlindFilter filter in cameraParent.GetComponentsInChildren<ColorBlindFilter>())
+        {
+            activeVisualDisorders.Add(filter);
+            filter.mode = ColorBlindMode.Tritanopia;
+            filter.enabled = true;
+        }
+    }
+
+
+
     public void PartialBlindness()
     {
 
@@ -107,10 +139,6 @@ public class DisorderSystem : MonoBehaviour {
         GetComponent<AudioSource>().enabled = true;
         GetComponent<AudioSource>().Play();
         activeCognitiveDisorders.Add(GetComponent<AudioSource>());
-
-        cameraParent.GetComponent<Animator>().enabled = true;
-        cameraParent.GetComponent<Animator>().Play("PanicAnimation");
-        activeCognitiveDisorders.Add(GetComponent<Animator>());
 
     }
 

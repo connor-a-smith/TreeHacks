@@ -6,11 +6,9 @@ public class DisorderSystem : MonoBehaviour {
 
     public static DisorderSystem instance;
 
-    private List<MonoBehaviour> activeDisorderComponents;
+    public GameObject cameraParent;
 
-    [SerializeField]
-    private UnityStandardAssets.ImageEffects.Grayscale grayScale;
-   
+    private List<MonoBehaviour> activeDisorderComponents;
 
     public void Awake()
     {
@@ -34,8 +32,25 @@ public class DisorderSystem : MonoBehaviour {
     public void Achromatopsia()
     {
 
-        activeDisorderComponents.Add(grayScale);
-        grayScale.enabled = true;
+        foreach (UnityStandardAssets.ImageEffects.Grayscale comp in cameraParent.GetComponentsInChildren< UnityStandardAssets.ImageEffects.Grayscale>())
+        {
+            activeDisorderComponents.Add(comp);
+            comp.enabled = true;
+        }
+    }
+
+    public void PartialBlindness()
+    {
+
+        int random = Random.Range(0, 2);
+
+        UnityStandardAssets.ImageEffects.BlurOptimized comp = cameraParent.GetComponentsInChildren<UnityStandardAssets.ImageEffects.BlurOptimized>()[random];
+
+        activeDisorderComponents.Add(comp);
+        comp.enabled = true;
+
+
+
     }
 
     public void Return()

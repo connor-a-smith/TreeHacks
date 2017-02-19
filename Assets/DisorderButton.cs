@@ -6,6 +6,17 @@ using UnityEngine.UI;
 
 public class DisorderButton : MonoBehaviour {
 
+    public enum DisorderType
+    {
+        VISUAL,
+        COGNITIVE,
+        AUDITORY
+
+    }
+
+    [SerializeField]
+    private DisorderType disorderType;
+
     [SerializeField]
     private bool isReturnButton;
 

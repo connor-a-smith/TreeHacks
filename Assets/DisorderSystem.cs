@@ -8,7 +8,9 @@ public class DisorderSystem : MonoBehaviour {
 
     public GameObject cameraParent;
 
-    private List<MonoBehaviour> activeDisorderComponents;
+    private List<MonoBehaviour> activeVisualDisorders;
+    private List<MonoBehaviour> activeCognitiveDisorders;
+    private List<MonoBehaviour> activeAudioDisorders;
 
     public void Awake()
     {
@@ -20,12 +22,15 @@ public class DisorderSystem : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        activeDisorderComponents = new List<MonoBehaviour>();
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        activeVisualDisorders = new List<MonoBehaviour>();
+        activeCognitiveDisorders = new List<MonoBehaviour>();
+        activeAudioDisorders = new List<MonoBehaviour>();
+
+
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 
@@ -34,7 +39,7 @@ public class DisorderSystem : MonoBehaviour {
 
         foreach (UnityStandardAssets.ImageEffects.Grayscale comp in cameraParent.GetComponentsInChildren< UnityStandardAssets.ImageEffects.Grayscale>())
         {
-            activeDisorderComponents.Add(comp);
+            activeVisualDisorders.Add(comp);
             comp.enabled = true;
         }
     }
@@ -46,7 +51,7 @@ public class DisorderSystem : MonoBehaviour {
 
         UnityStandardAssets.ImageEffects.BlurOptimized comp = cameraParent.GetComponentsInChildren<UnityStandardAssets.ImageEffects.BlurOptimized>()[random];
 
-        activeDisorderComponents.Add(comp);
+        activeVisualDisorders.Add(comp);
         comp.enabled = true;
 
 
@@ -58,19 +63,61 @@ public class DisorderSystem : MonoBehaviour {
 
         foreach (UnityStandardAssets.ImageEffects.BlurOptimized comp in cameraParent.GetComponentsInChildren<UnityStandardAssets.ImageEffects.BlurOptimized>())
         {
-            activeDisorderComponents.Add(comp);
+            activeVisualDisorders.Add(comp);
             comp.enabled = true;
         }
 
 
     }
 
-    public void Return()
+    public void ReturnVisual()
     {
-        while (activeDisorderComponents.Count > 0)
+
+        Return(DisorderButton.DisorderType.VISUAL);
+
+    }
+
+    public void ReturnAuditory()
+    {
+
+        Return(DisorderButton.DisorderType.AUDITORY);
+
+    }
+    public void ReturnCognitive()
+    {
+
+        Return(DisorderButton.DisorderType.COGNITIVE);
+
+    }
+
+
+    public void Return(DisorderButton.DisorderType type)
+    {
+
+        List<MonoBehaviour> listToRemove = null;
+
+        if (type == DisorderButton.DisorderType.AUDITORY)
         {
-            activeDisorderComponents[0].enabled = false;
-            activeDisorderComponents.RemoveAt(0);
+
+            listToRemove = activeAudioDisorders;
+
+        }
+        if (type == DisorderButton.DisorderType.VISUAL)
+        {
+
+            listToRemove = activeVisualDisorders;
+
+        }
+        if (type == DisorderButton.DisorderType.COGNITIVE)
+        {
+            listToRemove = activeCognitiveDisorders;
+
+        }
+
+        while (listToRemove.Count > 0)
+        {
+            listToRemove[0].enabled = false;
+            listToRemove.RemoveAt(0);
 
         }
     }

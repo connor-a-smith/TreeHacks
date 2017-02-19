@@ -7,26 +7,23 @@ public class DisorderSystem : MonoBehaviour {
     public static DisorderSystem instance;
 
     public GameObject cameraParent;
+    public GameObject earObject;
 
-    private List<MonoBehaviour> activeVisualDisorders;
-    private List<MonoBehaviour> activeCognitiveDisorders;
-    private List<MonoBehaviour> activeAudioDisorders;
+    private List<Behaviour> activeVisualDisorders;
+    private List<Behaviour> activeCognitiveDisorders;
+    private List<Behaviour> activeAudioDisorders;
 
     public void Awake()
     {
-
         instance = this;
-
     }
 
 	// Use this for initialization
 	void Start () {
 
-        activeVisualDisorders = new List<MonoBehaviour>();
-        activeCognitiveDisorders = new List<MonoBehaviour>();
-        activeAudioDisorders = new List<MonoBehaviour>();
-
-
+        activeVisualDisorders = new List<Behaviour>();
+        activeCognitiveDisorders = new List<Behaviour>();
+        activeAudioDisorders = new List<Behaviour>();
     }
 
     // Update is called once per frame
@@ -66,8 +63,14 @@ public class DisorderSystem : MonoBehaviour {
             activeVisualDisorders.Add(comp);
             comp.enabled = true;
         }
+    }
 
+    public void Deafness()
+    {
+        AudioLowPassFilter filter = earObject.GetComponent<AudioLowPassFilter>();
 
+        activeAudioDisorders.Add(filter);
+        filter.enabled = true;
     }
 
     public void ReturnVisual()
@@ -94,7 +97,7 @@ public class DisorderSystem : MonoBehaviour {
     public void Return(DisorderButton.DisorderType type)
     {
 
-        List<MonoBehaviour> listToRemove = null;
+        List<Behaviour> listToRemove = null;
 
         if (type == DisorderButton.DisorderType.AUDITORY)
         {

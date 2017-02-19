@@ -101,11 +101,13 @@ public class DisorderSystem : MonoBehaviour {
 
         foreach (UnityStandardAssets.ImageEffects.VignetteAndChromaticAberration comp in cameraParent.GetComponentsInChildren<UnityStandardAssets.ImageEffects.VignetteAndChromaticAberration>()) 
         {
-            activeVisualDisorders.Add(comp);
+            activeCognitiveDisorders.Add(comp);
             comp.enabled = true;
         }
 
-
+        GetComponent<AudioSource>().enabled = true;
+        GetComponent<AudioSource>().Play();
+        activeCognitiveDisorders.Add(GetComponent<AudioSource>());
 
     }
 

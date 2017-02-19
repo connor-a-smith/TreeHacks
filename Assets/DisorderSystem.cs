@@ -53,6 +53,18 @@ public class DisorderSystem : MonoBehaviour {
 
     }
 
+    public void LegalBlindness()
+    {
+
+        foreach (UnityStandardAssets.ImageEffects.BlurOptimized comp in cameraParent.GetComponentsInChildren<UnityStandardAssets.ImageEffects.BlurOptimized>())
+        {
+            activeDisorderComponents.Add(comp);
+            comp.enabled = true;
+        }
+
+
+    }
+
     public void Return()
     {
         while (activeDisorderComponents.Count > 0)

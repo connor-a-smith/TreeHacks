@@ -13,6 +13,22 @@ public class DisorderSystem : MonoBehaviour {
     private List<Behaviour> activeCognitiveDisorders;
     private List<Behaviour> activeAudioDisorders;
 
+    [SerializeField]
+    private SkinnedMeshRenderer leftPersonRenderer;
+
+    [SerializeField]
+    private Object leftPersonBlankFace;
+
+    [SerializeField]
+    private SkinnedMeshRenderer rightPersonRenderer;
+
+    [SerializeField]
+    private Object rightPersonBlankFace;
+
+
+    private Object correctLeftFace;
+    private Object correctRightFace;
+
     public void Awake()
     {
         instance = this;
@@ -24,6 +40,9 @@ public class DisorderSystem : MonoBehaviour {
         activeVisualDisorders = new List<Behaviour>();
         activeCognitiveDisorders = new List<Behaviour>();
         activeAudioDisorders = new List<Behaviour>();
+
+        correctLeftFace = leftPersonRenderer.material.mainTexture;
+        correctRightFace = rightPersonRenderer.material.mainTexture;
     }
 
     // Update is called once per frame
@@ -55,6 +74,14 @@ public class DisorderSystem : MonoBehaviour {
 
     }
 
+    public void Prosopagnosia()
+    {
+
+        leftPersonRenderer.material.mainTexture = (Texture)leftPersonBlankFace;
+        rightPersonRenderer.material.mainTexture = (Texture)rightPersonBlankFace;
+
+    }
+
     public void LegalBlindness()
     {
 
@@ -63,6 +90,19 @@ public class DisorderSystem : MonoBehaviour {
             activeVisualDisorders.Add(comp);
             comp.enabled = true;
         }
+    }
+
+    public void PanicAttack()
+    {
+
+        foreach (UnityStandardAssets.ImageEffects.VignetteAndChromaticAberration comp in cameraParent.GetComponentsInChildren<UnityStandardAssets.ImageEffects.VignetteAndChromaticAberration>()) 
+        {
+            activeVisualDisorders.Add(comp);
+            comp.enabled = true;
+        }
+
+
+
     }
 
     public void Deafness()
@@ -114,6 +154,9 @@ public class DisorderSystem : MonoBehaviour {
         if (type == DisorderButton.DisorderType.COGNITIVE)
         {
             listToRemove = activeCognitiveDisorders;
+
+            leftPersonRenderer.material.mainTexture = (Texture)correctLeftFace;
+            rightPersonRenderer.material.mainTexture = (Texture)correctRightFace;
 
         }
 

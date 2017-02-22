@@ -14,8 +14,10 @@ public class Selector : MonoBehaviour {
 	void Start () {
 
         raycastRenderer = GetComponent<LineRenderer>();
+        raycastRenderer.sortingLayerName = "Foreground";
+        raycastRenderer.sortingOrder = 200;
 
-	}
+    }
 
     // Update is called once per frame
     void Update() {

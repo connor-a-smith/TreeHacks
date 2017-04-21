@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 54511894639238556}
   - component: {fileID: 114167762475748110}
   - component: {fileID: 114508659328224278}
+  - component: {fileID: 114652331981913250}
   m_Layer: 0
   m_Name: ColorBlock
   m_TagString: Untagged
@@ -127,12 +128,12 @@ MonoBehaviour:
   touchHighlightColor: {r: 0, g: 0.006896496, b: 1, a: 0}
   allowedTouchControllers: 0
   isGrabbable: 1
-  holdButtonToGrab: 0
+  holdButtonToGrab: 1
   stayGrabbedOnTeleport: 1
   validDrop: 1
   grabOverrideButton: 0
   allowedGrabControllers: 0
-  grabAttachMechanicScript: {fileID: 0}
+  grabAttachMechanicScript: {fileID: 114508659328224278}
   secondaryGrabActionScript: {fileID: 0}
   isUsable: 0
   holdButtonToUse: 1
@@ -172,4 +173,21 @@ MonoBehaviour:
   throwMultiplier: 1
   onGrabCollisionDelay: 0
   destroyImmediatelyOnThrow: 1
-  breakForce: 1500
+  breakForce: 1e+10
+--- !u!114 &114652331981913250
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1449983671397708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  thickness: 1
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0

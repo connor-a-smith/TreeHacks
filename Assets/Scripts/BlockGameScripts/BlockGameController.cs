@@ -17,10 +17,15 @@ public class BlockGameController : MonoBehaviour {
     public GameObject blockPrefab;
     public Text monitorText;
 
+    private AudioSource source;
+    public AudioClip goodClip;
+    public AudioClip badClip;
+
     private GameObject[] blocks = new GameObject[3];
 	// Use this for initialization
 	void Start () {
         StartNewRound();
+        source = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -62,13 +67,18 @@ public class BlockGameController : MonoBehaviour {
 
                 GetComponentInChildren<ParticleSystem>().Play();
 
+                source.clip = goodClip;
+                source.Play();
+
             }
 
             //Lose
             else
             {
-                monitorText.text = "Incorrect";
+                monitorText.text = "Incorrect, you placed a " + properties.color.ToString() + " block";
 
+                source.clip = badClip;
+                source.Play();
             }
 
             StartCoroutine(StartNewRoundSoon());

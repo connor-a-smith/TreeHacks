@@ -41,15 +41,19 @@ public class OptionButton : MonoBehaviour {
 
     public void OnTriggerEnter(Collider other)
     {
-
-        PressButton();
+        if (other.gameObject.GetComponent<Selector>())
+        {
+            PressButton();
+        }
 
     }
 
     public void OnTriggerExit(Collider other)
     {
-
-        ReleaseButton();
+        if (other.gameObject.GetComponent<Selector>())
+        {
+            ReleaseButton();
+        }
 
     }
 }

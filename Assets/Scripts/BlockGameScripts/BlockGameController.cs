@@ -22,6 +22,8 @@ public class BlockGameController : MonoBehaviour {
     public AudioClip badClip;
 
     private GameObject[] blocks = new GameObject[3];
+    private bool isGameActive = false;
+
 	// Use this for initialization
 	void Start () {
         StartNewRound();
@@ -35,6 +37,8 @@ public class BlockGameController : MonoBehaviour {
 
     public void StartNewRound()
     {
+        isGameActive = true;
+
         for (int i = 0; i < 3; i++)
         {
             //Destroy old round blocks.
@@ -58,8 +62,10 @@ public class BlockGameController : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         BlockProperties properties = other.gameObject.GetComponent<BlockProperties>();
-        if (properties != null)
+        if (properties != null && isGameActive)
         {
+            isGameActive = false;
+
             //Win
             if (properties.color == desiredColor)
             {

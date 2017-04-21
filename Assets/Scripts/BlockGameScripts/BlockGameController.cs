@@ -11,11 +11,11 @@ public class BlockGameController : MonoBehaviour {
     private BlockColor desiredColor;
     private BlockShape desiredShape;
 
-    private Text MonitorText;
     private AudioSource speaker;
 
     public Transform blockSpawnPosition;
     public GameObject blockPrefab;
+    public Text monitorText;
 
     private GameObject[] blocks = new GameObject[3];
 	// Use this for initialization
@@ -41,6 +41,8 @@ public class BlockGameController : MonoBehaviour {
         int randomBlockIndex = Random.Range(0, blocks.Length);
 
         desiredColor = blocks[randomBlockIndex].GetComponent<BlockProperties>().color;
+
+        monitorText.text = "Place a " + desiredColor.ToString() + " cube in the container";
         
         //All same color.
         //All same shape.
@@ -56,6 +58,8 @@ public class BlockGameController : MonoBehaviour {
             //Win
             if (properties.color == desiredColor)
             {
+                monitorText.text = "Good!";
+
                 GetComponentInChildren<ParticleSystem>().Play();
 
             }
@@ -63,6 +67,7 @@ public class BlockGameController : MonoBehaviour {
             //Lose
             else
             {
+                monitorText.text = "Incorrect";
 
             }
 

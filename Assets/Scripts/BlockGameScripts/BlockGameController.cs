@@ -34,7 +34,7 @@ public class BlockGameController : MonoBehaviour {
         {
             //Destroy old round blocks.
             Destroy(blocks[i]);
-            blocks[i] = GameObject.Instantiate(blockPrefab, blockSpawnPosition.position + new Vector3(0, 0, .5f * i), Quaternion.identity);
+            blocks[i] = GameObject.Instantiate(blockPrefab, blockSpawnPosition.position + new Vector3(0, 0, .3f * i), Quaternion.identity);
             blocks[i].GetComponent<BlockProperties>().InitBlock();
         }
 
